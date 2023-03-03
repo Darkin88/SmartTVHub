@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>TV Hub</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<meta name="description" content="Hub to connect you to de web">
+	<meta name="keywords" content="Hub, hub, HUB">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="src/css/styles.css">
+</head>
+<body>
+	<p><span id="hour"></span></p>
+	<!-- Search-section -->
+	<div class="search-section">
+		<h1>Welcome to your smart TV Hub</h1>
+		<form action="http://google.com/search" class="search" target="_blank">
+	    	<input name="q" class="search-box" placeholder="Search on internet">
+		</form>	
+	</div>
+		<div class="link-section">
+			<div class="link-card">
+				<p>
+					<a href="https://google.com/" target="_blank"><img src="src/img/link/google.png" width="50px" title="Google"></a>
+				</p>
+			</div>
+			<div class="link-card">
+				<p>
+					<a href="https://youtube.com/tv" target="_blank"><img src="src/img/link/youtube.png" width="50px" title="Youtube"></a>
+				</p>
+			</div>
+			<div class="link-card">
+				<p>
+						<a href="https://twitch.tv/" target="_blank"><img src="src/img/link/twitch.png" width="50px" title="Twitch"></a>
+					</p>
+			</div>
+		</div>
+		<div class="link-section">
+				<div class="link-card">
+					<p>
+						<a href="https://twitter.com/" target="_blank"><img src="src/img/link/twitter.png" width="50px" title="Twitter"></a>
+					</p>
+				</div>
+				<div class="link-card">
+					<p>
+					<a href="https://discord.com/app/" target="_blank"><img src="src/img/link/discord.png" width="50px" title="Discord"></a>
+				</p>
+				</div>
+				<div class="link-card">
+					<p>
+						<a href="https://netflix.com/" target="_blank"><img src="src/img/link/Netflix.png" width="50px" title="Netflix"></a>
+					</p>
+				</div>
+<script>
+      function displayHour() {
+        // get date and time
+        var date = new Date();
+        var heure = date.toLocaleTimeString();
+        // Update text on page
+        document.getElementById("hour").innerHTML = heure;
+      }
+      // Update hour every seconds
+      setInterval(displayHour, 1000);
+    </script>
+</html>
